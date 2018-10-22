@@ -1,6 +1,6 @@
 # نمونه‌کدهای آماده برای دریافت توکن
 
-<div style="direction: rtl">
+<div dir='rtl'>
 ما در پی‌پینگ از authorization code with PKCE به عنوان oAuth flow اصلی احراز هویت استفاده می کنیم.
 
 برای اطلاع از روند کار به این آدرس مراجعه کنید:
