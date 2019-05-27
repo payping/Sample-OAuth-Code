@@ -12,10 +12,10 @@ using Newtonsoft.Json;
 
 namespace test_oauth.Controllers
 {
-    [Route("api/[action]")]
+    [Route("[controller]/[action]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]
-    public class ValuesController : ControllerBase
+    public class OauthController : ControllerBase
     {
         //Server Info
         public const string PayPingOauthPath = "https://oauth.payping.ir";
@@ -23,14 +23,14 @@ namespace test_oauth.Controllers
         public const string PayPingTokeneURL = "connect/token";
 
         //Client Info
-        private const string ClientId = "[YourClientId]";
-        private const string ClientSecret = "[YourClientSecret]";
+        private const string ClientId = "[YOUR_CLIENT_ID]";
+        private const string ClientSecret = "[YOUR_CLIENT_SECRET]";
 
 
-        private const string Scopes = "[Your Requested Scopes Separated by Space]";
+        private const string Scopes = "[Your Requested Scopes Separated by SPACE]";
 
         //you should replace your own RedirectURL
-        private const string RedirectUrl = @"http://localhost:5000/api/GetAcessToken";
+        private const string RedirectUrl = @"http://localhost:5000/Oauth/GetAcessToken";
 
         //ClientType Info
         private const string ResponseType = "code";

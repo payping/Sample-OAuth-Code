@@ -20,3 +20,10 @@
 7- Copy access token
 
 That's all :fire:
+
+## ASP.NET Core (C#) Sample Client Register
+
+You should run the project like described.
+For more info visit this link:
+
+[:bulb: Help!](https://help.payping.ir/fa/article/thbtnm-rbr-dr-n-z-trk-obsros-yi2g48/)
