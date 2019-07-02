@@ -7,6 +7,7 @@ import string
 import requests
 import json
 
+### Sample for client register and oauth2
 
 class PayPing:
     CLIENT_ID = ""
@@ -14,6 +15,7 @@ class PayPing:
     PREFIX = ""
     REDIRECT_URI = "%s/%s" % (settings.SITE_URL, PREFIX) # define SITE_URL in settings
     TOKEN = ""
+    SCOPES = "openid pay:write profile" #Add your defined scopes
 
     def code_verifier(self, n_bytes=32):
         verifier = base64.urlsafe_b64encode(os.urandom(n_bytes)).rstrip(b"=")
@@ -76,7 +78,7 @@ class PayPing:
         verifier = verifier.encode()
         challenge = self._code_challenge(verifier).decode("utf-8")
         url = "https://oauth.payping.ir/connect/authorize?"
-        url += "scope=openid pay:write profile&"
+        url += "scope=%s&" % (SCOPES)
         url += "response_type=code&"
         url += "client_id=%s&" % (self.CLIENT_ID)
         url += "code_challenge=%s&" % (challenge)
