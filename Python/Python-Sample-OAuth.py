@@ -6,6 +6,7 @@ import random
 import string
 import requests
 import json
+import secrets
 
 ### Sample for client register and oauth2
 
@@ -17,12 +18,12 @@ class PayPing:
     TOKEN = ""
     SCOPES = "openid pay:write profile" #Add your defined scopes
 
-    def code_verifier(self, n_bytes=32):
+    def code_verifier(self):
         random = secrets.token_bytes(64)
         code_verifier = base64.b64encode(random, b'-_').decode().replace('=', '')
         return code_verifier
 
-    def _code_challenge(self, verifier):
+    def _code_challenge(self, code_verifier):
         m = hashlib.sha256()
         m.update(code_verifier.encode())
         d = m.digest()
