@@ -18,12 +18,16 @@ class PayPing:
     SCOPES = "openid pay:write profile" #Add your defined scopes
 
     def code_verifier(self, n_bytes=32):
-        verifier = base64.urlsafe_b64encode(os.urandom(n_bytes)).rstrip(b"=")
-        return verifier
+        random = secrets.token_bytes(64)
+        code_verifier = base64.b64encode(random, b'-_').decode().replace('=', '')
+        return code_verifier
 
     def _code_challenge(self, verifier):
-        digest = hashlib.sha256(verifier).digest()
-        return base64.urlsafe_b64encode(digest).rstrip(b"=")
+        m = hashlib.sha256()
+        m.update(code_verifier.encode())
+        d = m.digest()
+        code_challenge = base64.b64encode(d, b'-_').decode().replace('=', '')
+        return code_challenge
 
     def generate_username(self, limit=20):
         return "hmyn" + "".join(random.choice(string.digits) for i in range(limit))
