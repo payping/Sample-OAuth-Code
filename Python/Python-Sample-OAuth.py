@@ -80,8 +80,7 @@ class PayPing:
         return url.format(uuid=uuid)
 
     def get_access_url(self, verifier, unique_code):
-        verifier = verifier.encode()
-        challenge = self._code_challenge(verifier).decode("utf-8")
+        challenge = self._code_challenge(verifier)
         url = "https://oauth.payping.ir/connect/authorize?"
         url += "scope=%s&" % (SCOPES)
         url += "response_type=code&"
