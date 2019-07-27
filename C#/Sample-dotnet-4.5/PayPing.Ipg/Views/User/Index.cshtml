@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("GetPayPingAccess", "user", FormMethod.Get))
+{
+    <div class="row col-md-12 loginByPayping center">
+            <button id="login " type="submit" class="PayPingLoginDark">
+                <span class="PayPingText">ورود با پی‌پینگ</span>
+                <span class="PayPingIcon"></span>
+            </button>
+    </div>
+
+}
+
+

@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model PayPing.Ipg.Models.RequestPayment
+
+
+@using (Html.BeginForm("Pay", "PayPing", FormMethod.Post))
+{
+<div >
+    <div class="row col-md-12 pay-row center">
+        <div class="col-md-8 center">
+            @Html.LabelFor(r => r.Amount)
+            @Html.TextBoxFor(m => m.Amount, new { @class = "pay-input"  , Value = 100 })
+        </div>
+    </div>
+    <div class="row col-md-12  pay-row center">
+        <div class="col-md-8 center">
+            @Html.LabelFor(r => r.PayerName)
+            @Html.TextBoxFor(m => m.PayerName, new { @class = "pay-input", Value = "پی پینگ" })
+        </div>
+    </div>
+    <div class="row col-md-12  pay-row center">
+        <div class="col-md-8 center">
+            @Html.LabelFor(r => r.PayerIdentity)
+            @Html.TextBoxFor(m => m.PayerIdentity, new { @class = "pay-input", Value = "info@payping.ir" })
+        </div>
+    </div>
+    <div class="row col-md-12  pay-row center">
+        <div class="col-md-8 center">
+            @Html.LabelFor(r => r.ClientRefId)
+            @Html.TextBoxFor(m => m.ClientRefId, new { @class = "pay-input", Value = "123" })
+        </div>
+    </div>
+    <div class="row col-md-12 pay-row center">
+        <div class="col-md-8 center">
+            @Html.LabelFor(r => r.ReturnUrl)
+            @Html.TextBoxFor(m => m.ReturnUrl, new { @class = "pay-input", Value = $"{Request.Url.Scheme}://{Request.Url.Authority}/v1/PayPing/PaypingVerify" })
+        </div>
+    </div>
+    <div class="row col-md-12 pay-row center">
+        <div class="col-md-8 center">
+            @Html.LabelFor(r => r.Description)
+            @Html.TextBoxFor(m => m.Description, new { @class = "pay-input", Value = "بابت تنخواه شماره 123" })
+        </div>
+    </div>
+
+    <div class="row col-md-12 center">
+            <input type="submit" name="pay" id="pay" class="btn pay-button btn-success col-md-7" value="پرداخت" />
+    </div>
+</div>
+}
