@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PayPing.master.cs" Inherits="payping_webfrom.PayPing" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/styles.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="container body-content">
+                <div class="row center">
+                    <img class=" logo" src="payping.png" />
+                </div>
+                <hr />
+
+                <div class="row table">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="row">
+                    <footer>
+                        <hr />
+                        <p>&copy; @DateTime.Now.Year - PayPing.ir</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "payping-webfrom", "payping-webfrom\payping-webfrom.csproj", "{0461A1C0-DF40-4F6F-A418-75B316E6788F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0461A1C0-DF40-4F6F-A418-75B316E6788F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0461A1C0-DF40-4F6F-A418-75B316E6788F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0461A1C0-DF40-4F6F-A418-75B316E6788F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0461A1C0-DF40-4F6F-A418-75B316E6788F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {596900C0-6582-4716-A5C9-DEA445D3E2BD}
+	EndGlobalSection
+EndGlobal

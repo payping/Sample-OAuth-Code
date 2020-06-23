@@ -1,0 +1,51 @@
+﻿body {
+    font-family: IRANSans !important;
+}
+footer{
+    position:absolute;
+    bottom:0;
+}
+.logo{
+    width:250px;
+}
+.loginByPayping{
+    margin-top:8em;
+}
+.center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.center label {
+    margin-right:2em;
+}
+.center-space {
+    justify-content: space-around !important;
+}
+
+.PayPingLoginDark{
+    outline:none;
+    border:none;
+}
+
+.pay-row{
+    margin-bottom:1em;
+}
+
+.pay-row:first-child {
+    margin-top: 3em;
+}
+.pay-input{
+    border-radius:25px;
+    border:1px solid #eee;
+    padding:0.8em;
+    min-width:50%;
+}
+.pay-button {
+    margin-top:3em;
+}
+.table{
+    margin-top:2em;
+}
